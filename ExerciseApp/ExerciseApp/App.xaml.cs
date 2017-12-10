@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace ExerciseApp
 {
@@ -13,7 +8,7 @@ namespace ExerciseApp
         {
             InitializeComponent();
 
-            MainPage = new ExerciseApp.MainPage();
+            MainPage = new QuotesPage();
         }
 
         protected override void OnStart()
