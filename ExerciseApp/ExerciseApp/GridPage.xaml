@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExerciseApp.GridPage"
+             BackgroundColor="#354242">
+    <Grid Padding="40" RowSpacing="10" ColumnSpacing="10">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Label 
+            Grid.Row="0" 
+            Grid.ColumnSpan="3" 
+            Text="1234" 
+            FontSize="50" 
+            TextColor="White" 
+            HorizontalOptions="Center" 
+            VerticalOptions="Center" />
+        
+        <Button Grid.Row="1" Grid.Column="0" Text="1" TextColor="#28282C" BackgroundColor="#FFF" FontSize="30" BorderRadius="30" />
+        <Button Grid.Row="1" Grid.Column="1" Text="2" TextColor="#28282C" BackgroundColor="#FFF" FontSize="30" BorderRadius="30" />
+        <Button Grid.Row="1" Grid.Column="2" Text="3" TextColor="#28282C" BackgroundColor="#FFF" FontSize="30" BorderRadius="30" />
+        <Button Grid.Row="2" Grid.Column="0" Text="4" TextColor="#28282C" BackgroundColor="#FFF" FontSize="30" BorderRadius="30" />
+        <Button Grid.Row="2" Grid.Column="1" Text="5" TextColor="#28282C" BackgroundColor="#FFF" FontSize="30" BorderRadius="30" />
+        <Button Grid.Row="2" Grid.Column="2" Text="6" TextColor="#28282C" BackgroundColor="#FFF" FontSize="30" BorderRadius="30" />
+        <Button Grid.Row="3" Grid.Column="0" Text="7" TextColor="#28282C" BackgroundColor="#FFF" FontSize="30" BorderRadius="30" />
+        <Button Grid.Row="3" Grid.Column="1" Text="8" TextColor="#28282C" BackgroundColor="#FFF" FontSize="30" BorderRadius="30" />
+        <Button Grid.Row="3" Grid.Column="2" Text="9" TextColor="#28282C" BackgroundColor="#FFF" FontSize="30" BorderRadius="30" />
+        <Button Grid.Row="4" Grid.Column="1" Text="0" TextColor="#28282C" BackgroundColor="#FFF" FontSize="30" BorderRadius="30" />
+        
+        <Button Grid.Row="5" Grid.ColumnSpan="3" Text="Dial" TextColor="#28282C" FontSize="30" BackgroundColor="#96CA2D"  BorderRadius="30" />
+    </Grid>
+</ContentPage>

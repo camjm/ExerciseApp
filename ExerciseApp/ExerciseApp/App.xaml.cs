@@ -8,7 +8,7 @@ namespace ExerciseApp
         {
             InitializeComponent();
 
-            MainPage = new QuotesPage();
+            MainPage = new RelativeLayoutPage();
         }
 
         protected override void OnStart()
