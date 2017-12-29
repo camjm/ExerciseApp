@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExerciseApp.AirbnbPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar 
+                x:Name="searchBar" 
+                Placeholder="Search" 
+                TextChanged="SearchBar_TextChanged" />
+            <ListView 
+                x:Name="listView"
+                IsGroupingEnabled="True"
+                GroupDisplayBinding="{Binding Title}"
+                IsPullToRefreshEnabled="True"
+                Refreshing="listView_Refreshing"
+                ItemSelected="listView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Location}" Detail="{Binding Period}">
+                            <TextCell.ContextActions>
+                                <MenuItem 
+                                    Text="Delete" 
+                                    IsDestructive="True" 
+                                    Clicked="MenuItem_Clicked" 
+                                    CommandParameter="{Binding .}" />
+                            </TextCell.ContextActions>
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

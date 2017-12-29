@@ -41,8 +41,14 @@
     <Compile Include="AbsoluteLayoutPage.xaml.cs">
       <DependentUpon>AbsoluteLayoutPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AirbnbPage.xaml.cs">
+      <DependentUpon>AirbnbPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GalleryPage.xaml.cs">
+      <DependentUpon>GalleryPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Grid2Page.xaml.cs">
       <DependentUpon>Grid2Page.xaml</DependentUpon>
@@ -53,6 +59,8 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Search.cs" />
+    <Compile Include="Models\SearchGroup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuotesPage.xaml.cs">
       <DependentUpon>QuotesPage.xaml</DependentUpon>
@@ -60,6 +68,7 @@
     <Compile Include="RelativeLayoutPage.xaml.cs">
       <DependentUpon>RelativeLayoutPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\SearchService.cs" />
     <Compile Include="StackLayout2Page.xaml.cs">
       <DependentUpon>StackLayout2Page.xaml</DependentUpon>
     </Compile>
@@ -139,6 +148,19 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GalleryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AirbnbPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.4.0.74863\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.74863\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExerciseApp.GalleryPage"
+             BackgroundColor="Black">
+    <AbsoluteLayout>
+        <Image
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All"
+            x:Name="image" />
+        <ActivityIndicator 
+            AbsoluteLayout.LayoutBounds="0.5, 0.05, 100, 100" 
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}" 
+            Color="White" />
+        <Button 
+            AbsoluteLayout.LayoutBounds="0.05, 0.05, 100, 100" 
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="Transparent"
+            Clicked="Previous_Clicked"
+            Image="left.png" />
+        <Button 
+            AbsoluteLayout.LayoutBounds="0.95, 0.05, 100, 100" 
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="Transparent"
+            Clicked="Next_Clicked"
+            Image="right.png" />
+    </AbsoluteLayout>
+</ContentPage>

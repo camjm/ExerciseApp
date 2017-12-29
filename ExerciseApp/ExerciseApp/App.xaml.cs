@@ -8,7 +8,7 @@ namespace ExerciseApp
         {
             InitializeComponent();
 
-            MainPage = new RelativeLayoutPage();
+            MainPage = new AirbnbPage();
         }
 
         protected override void OnStart()
